@@ -1,0 +1,8 @@
+#Ignore ds store
+.DS_Store
+
+#Ignore data folder
+/data
+
+#Ignore csv's
+*.csv
