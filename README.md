@@ -36,4 +36,4 @@ Data
 
 
 <a name="conclusion"></a>
-## 5. Hypothesis Testing
+## 5. Conclusion
