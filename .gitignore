@@ -6,3 +6,6 @@
 
 #Ignore csv's
 *.csv
+
+#Ignore ipynbs
+*.ipynb_checkpoints
