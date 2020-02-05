@@ -7,12 +7,12 @@ We are constantly in awe of the changes made to the medical technology side of t
 
 ### Table of Contents
 
-#### 1. [Overview](#overview)  
-#### 2. [Goals](#goals) 
-#### 3. [Data](#data)
-#### 4. [Analysis](#ana)
-#### 5. [Models](#model)
-#### 6. [Conclusion](#conclusion)
+1. [Overview](#overview)
+2. [Goals](#goals)
+3. [Data](#data)
+4. [Analysis](#ana)
+5. [Models](#model)
+6. [Conclusion](#conclusion)
 
 <a name="overview"></a>
 ## 1. Overview
