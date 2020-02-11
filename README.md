@@ -105,12 +105,13 @@ This Machine Learning Problem is a Supervised multiclass-Classification Problem.
 
 In order to make this study as applicable as possible, I chose to separated my data into training and test sets based on the year. For Training I used the play-by-play data from the 2013-2017 regular seasons, and for testing I chose to predict the 2018 regular season. 
 
-<p align="center">
-<img align=left src="graphics/pXAfX.png" width="400"/>          
- 
+<img align=left src="graphics/pXAfX.png" width="400"/>   
+</p>
 <img align=right src="graphics/model_selection.png" width="400"/>
 </p>
+   
 
+My base model is a Multi-Class Logistic Regression model. 
 
 <a name="conclusion"></a>
 ## 6. Conclusion
