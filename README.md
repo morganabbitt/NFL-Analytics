@@ -107,6 +107,9 @@ In order to make this study as applicable as possible, I chose to separated my d
 
 <p align="center">
 <img src="graphics/pXAfX.png" width="400"/>   
+</p>
+
+<p align="center">
 <img src="graphics/model_selection.png" width="400"/>
 </p>
    
