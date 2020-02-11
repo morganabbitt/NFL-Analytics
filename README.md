@@ -103,18 +103,23 @@ All of this EDA is great but if we can't build an accurate model than it doesnt 
 
 This Machine Learning Problem is a Supervised multiclass-Classification Problem. Originally it was assumed that predicting 3 classes with an imbalance of 60-20-10 was going to be very different. As I continued to do more EDA I become more hopeful after recognizing that all 3 decisions had very different relationships with the features of our dataset. 
 
-In order to make this study as applicable as possible, I chose to separated my data into training and test sets based on the year. For Training I used the play-by-play data from the 2013-2017 regular seasons, and for testing I chose to predict the 2018 regular season. 
+In order to make this study as applicable as possible, I chose to separated my data into training and test sets based on the year. For Training I used the play-by-play data from the 2013-2017 regular seasons, and for testing I chose to predict the 2018 regular season. After splitting the training data one step further into a validation set, I was able to evaluate each of my models and to compare them for selection. 
 
 <p align="center">
 <img src="graphics/pXAfX.png" width="400"/>   
 </p>
 
+I ran into two different problems when deciding my scoring metric.  
+1. Multi-Classification
+2. Imbalanced Classes 
+
+Recall and Precision do not work with Multi-Classification problems even though they are good for imbalanced classes. After some reasearch and studying, I decided to evaluate my Models with a **Weighted Average F1 score**. This type of score takes into account the imbalance in the classes and can be used for any model. 
+
 <p align="center">
 <img src="graphics/model_selection.png" width="400"/>
 </p>
    
-
-My base model is a Multi-Class Logistic Regression model. 
+My base model is a Multi-Class Logistic Regression model. I followed with RandomForests and GradientBoosting and ran Grid Searches on both. The GradientBoosting Randomized Search performed the best with a Weighted F1 score of **0.954**. 
 
 <a name="conclusion"></a>
 ## 6. Conclusion
