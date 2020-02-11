@@ -1,9 +1,6 @@
 # NFL Advanced Analytics on 4th down 
 
-The game of Football is ever changing and is constantly adapting to new technology and advances in science. But is every aspect of the game advancing? Inspired by Brian Burke's reasearch article "4th Down Study" written in 2014, I have chosen to reintroduce his findings about 4th down decision making and advanced football analytics. Using the combination of Exploratory Data Analysis and Machine Learning, I aim to change the stigma around "risky" decision making specifically on 4th downs. 
-
-We are constantly in awe of the changes made to the medical technology side of the game, why does this science have to be any different? 
-
+Time and time again we hear about coaches punting or kicking a field goal on 4th down just to hear later that they should have gone for it. So when should they really go for it? Using the combination of Exploratory Data Analysis and Machine Learning, I aim to build a model that takes into account the field position, the drive, the quarter, and anything else you can think of to predict whether or not a team is going to Punt, Kick a Field Goal, or Go for it on 4th down. 
 
 ### Table of Contents
 
@@ -19,9 +16,7 @@ We are constantly in awe of the changes made to the medical technology side of t
 
 Need a quick refresher? Check out this [video...](https://www.youtube.com/watch?v=3t6hM5tRlfA).
 
-As someone that loves football and loves math, I always find myself in a predicament when my teams are faced with 4th downs. 
-This study will provide insight about 4th downs and the subsequent play calls that follow. 
-show that due to the expected point outcomes (that will be explained later) teams should always 'go for it' on 4th and 1. But why don't they? 
+4th downs are considered a very important part of football. You can either add to your score or give the ball away to the other team at a worse field position. Coaches tend to be very, very conservative when it comes to "Going for it" on 4th down. Even sometimes when statistically Going for it is in their favor. I want to educate fans and coaches about their options on 4th down and what the best decision is. 
 
 
 <a name="goals"></a>
@@ -38,18 +33,47 @@ I want to use the research and analyses I have done to revolutionalize sports us
 Thanks to Maksim Horowitz, Ron Yurko, and Sam Ventura, this data is publicly available on [Kaggle](https://www.kaggle.com/maxhorowitz/nflplaybyplay2009to2016). 
 From the 2009 to the 2018 regular season, this dataset contains 449,371 rows (individual plays) and 255 columns (features). 
 
-|Entire Dataset | 4th Down Plays|
-|-----------------------------|--------|
-| 449371 individual plays     | 39644 plays|
-| 10 seasons                  | 10 seasons |
-| 2526 unique games           |2526 unique games |
+|Entire Dataset |                
+|-----------------------------|             
+|449371 individual plays|          
+|255 features|                     
+|2009 - 2018 regular seasons|     
+|2,526 games|                          
+|37,769 4th down plays|                       
+
 
 **Pipeline**
 The process for reading in the data for EDA purposes 
-- After reading in the csv provided on Kaggle using pandas in python, for modeling on 4th down required some specific code
-`
+- CSV read in using pandas specifying low memory due to the size of the file. 
+                  
+`pd.read_csv('NFL_playbyplay.csv', low_memory=False)` 
+
+- In order to do EDA on 4th down plays a lot of cleaning was involved:
+  1. Specified all 4th down plays
+  2. Got rid of plays that had penalties
+  3. Changed data type of date features and created new feature engineered columns like year and month 
+  4. Got rid of plays that were the last of the quarter
+
 <a name="ana"></a>
 ## 4. Analysis
+The best part about this project was the EDA. Finding what influences 4th down and the analyzing the discrepencies about which plays happen when was fascinating. We will take a look at some of those findings here.  
+<p align="center">
+<img src="graphics/pct_plays3.png" width="400" height="350">
+</p>
+
+Its no secret that Punting is far more common than Kicking a Field Goal or Going for it, but I had no idea that it was going to be this big of a gap between the three. After seeing this class imbalance the first thought was that any model would not be able to predict these classes very well if at all. 
+
+But I decided to jump into some of the features to figure out what really makes a difference on 4th down. One previous notion was that the `yardline_100` feature, or Field Position would make a huge difference.
+
+<p align="center">
+<img src="graphics/field_pos3.png" width="550" height="400">
+</p>
+
+In this visual, along the xaxis we have the field position, 0 representing the opponents endzone and 100 representing a teams own endzone. If you know anything about football you know that A kicker cannot kick a Field Goal much further than the opponents own 40 yard line, and we can clearly see that from the Field Goal's distribution. Similarly we can see that Punting tends to be centered around a teams own 30 yard line or so. The most important thing to take away from this decomposition about subsequent play types is that all of their distributions are drastically different, we can see that although Going for it spans a larger area of the field, their distributions all vary. 
+
+<p align="center">
+<img src="graphics/qtr3.png" width="550" height="400">
+</p>
 
 <a name="model"></a>
 ## 5. Models
