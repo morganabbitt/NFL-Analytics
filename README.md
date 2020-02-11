@@ -75,8 +75,42 @@ In this visual, along the xaxis we have the field position, 0 representing the o
 <img src="graphics/qtr3.png" width="550" height="400">
 </p>
 
+When we decompose the decision on 4th down based on quarter we see some different trends. As the game goes on we can see an increse of Going for it in the 4th quarter, in the game of football if you are losing in the 4th quarter you can't afford to give the ball to the other team as that quarter ticks on so teams will tend to Go for it more than in any other quarter. 
+
+Another interesting feature was `ydstogo`. We can interpret Yards to Go as the number of yards until the 1st down marker. 
+
+<p align="center">
+<img src="graphics/yds_to_go3.png" width="600" height="400">
+</p>
+
+This relationship between the decision on 4th down and the yards to go is also very prominent. As the Yards until the first down marker increases we can see that teams are more likely to punt. At 4th and 1, teams are very likely to Go for it, but if we go one yard further away to 4th and 2, teams are much less likely to Go for it. From Going for it at almost 45 % of the time at 1 yard, to Going for it less than 20 % of the time at 2 yards.
+
+Another interesing feature that was included in the data set was `ep` or Expected Points. Expected Points are calculated by multiplying the probability of a first down on that play by the number of points you would get, subtracted by (1 - probability) multiplied by the points the opposing team would get if they were to have the ball there. 
+
+An example would be that A touchdown is worth 7 for the team in posession, and due to a kickoff and giving the other team the ball we subtract 0.7 points. The Expected Points for a Touchdown is 6.3 points. 
+
+<p align="center">
+<img src="graphics/expected_pnts3.png" width="600" height="400">
+</p>
+
+The distribution of Punting on 4th down is centered around -1, the fact that this is negative means that the opposing team is actually more likely to score next than the team in posession. Again one of the main takeaways of this visualization is that all three different decisions have very different distributions.  
+
+
+
 <a name="model"></a>
 ## 5. Models
+All of this EDA is great but if we can't build an accurate model than it doesnt really say anything. 
+
+This Machine Learning Problem is a Supervised multiclass-Classification Problem. Originally it was assumed that predicting 3 classes with an imbalance of 60-20-10 was going to be very different. As I continued to do more EDA I become more hopeful after recognizing that all 3 decisions had very different relationships with the features of our dataset. 
+
+In order to make this study as applicable as possible, I chose to separated my data into training and test sets based on the year. For Training I used the play-by-play data from the 2013-2017 regular seasons, and for testing I chose to predict the 2018 regular season. 
+
+<p align="center">
+<img src="graphics/pXAfX.png" width="425"/> <img src="graphics/model_selection.png" width="425"/>
+</p>
+
+My base model is a Multi-Class Logistic Regression model. 
+
 
 <a name="conclusion"></a>
 ## 6. Conclusion
