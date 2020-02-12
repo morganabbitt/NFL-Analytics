@@ -134,16 +134,22 @@ Recall and Precision do not work with Multi-Classification problems even though 
    
 My base model is a Multi-Class Logistic Regression model. I followed with RandomForests and GradientBoosting and ran Grid Searches on both. The GradientBoosting Randomized Search performed the best with a Weighted F1 score of **0.954**. 
 
+<p align="center">
+<img src="graphics/gbc_cm.png" width="600" height="400"/>
+</p>
+
+The final step of this Machine Learning Problem was to run the model on the test set. After fitting on the Training, we predict on the Test set that we had set aside until now. As we can see on the left y-axis we have the true labels and along the x-axis we have the predicted labels
+
 <a name="conclusion"></a>
 ## 6. Conclusion
 
 Predicting the Decision on 4th down has huge applications. 
-###1. Coaching Decisions
+### 1. Coaching Decisions
   -Understanding 
-###2. Football Education
+### 2. Football Education
   -Educating Football Fans about 4th downs and why/when they occur
   -Providing base for young players to advance their 
-###3. Leagues
+### 3. Leagues
   - NFL
   - NCAA
   - XFL
