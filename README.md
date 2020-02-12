@@ -53,6 +53,19 @@ The process for reading in the data for EDA purposes
   2. Got rid of plays that had penalties
   3. Changed data type of date features and created new feature engineered columns like year and month 
   4. Got rid of plays that were the last of the quarter
+  
+Some other important modules that were utilized in this study. 
+
+| Modules | sklearn |
+|----------|-----------|
+|`pandas`| `GradientBoostingClassifier`| 
+|`numpy`|`RandomizedSearchCV`|
+|`matplotlib`|`KFold`|
+|`seaborn`|`train_test_split`|
+|`random` |`RandomForest Classifier`|
+| |`permutation importance`|
+| | `Logistic Regression`|
+
 
 <a name="ana"></a>
 ## 4. Analysis
@@ -66,13 +79,13 @@ Its no secret that Punting is far more common than Kicking a Field Goal or Going
 But I decided to jump into some of the features to figure out what really makes a difference on 4th down. One previous notion was that the `yardline_100` feature, or Field Position would make a huge difference.
 
 <p align="center">
-<img src="graphics/field_pos3.png" width="550" height="400">
+<img src="graphics/field_pos3.png" width="600" height="400">
 </p>
 
 In this visual, along the xaxis we have the field position, 0 representing the opponents endzone and 100 representing a teams own endzone. If you know anything about football you know that A kicker cannot kick a Field Goal much further than the opponents own 40 yard line, and we can clearly see that from the Field Goal's distribution. Similarly we can see that Punting tends to be centered around a teams own 30 yard line or so. The most important thing to take away from this decomposition about subsequent play types is that all of their distributions are drastically different, we can see that although Going for it spans a larger area of the field, their distributions all vary. 
 
 <p align="center">
-<img src="graphics/qtr3.png" width="550" height="400">
+<img src="graphics/qtr3.png" width="600" height="400">
 </p>
 
 When we decompose the decision on 4th down based on quarter we see some different trends. As the game goes on we can see an increse of Going for it in the 4th quarter, in the game of football if you are losing in the 4th quarter you can't afford to give the ball to the other team as that quarter ticks on so teams will tend to Go for it more than in any other quarter. 
@@ -80,7 +93,7 @@ When we decompose the decision on 4th down based on quarter we see some differen
 Another interesting feature was `ydstogo`. We can interpret Yards to Go as the number of yards until the 1st down marker. 
 
 <p align="center">
-<img src="graphics/yds_to_go3.png" width="600" height="400">
+<img src="graphics/yds_to_go3.png" width="600" height="420">
 </p>
 
 This relationship between the decision on 4th down and the yards to go is also very prominent. As the Yards until the first down marker increases we can see that teams are more likely to punt. At 4th and 1, teams are very likely to Go for it, but if we go one yard further away to 4th and 2, teams are much less likely to Go for it. From Going for it at almost 45 % of the time at 1 yard, to Going for it less than 20 % of the time at 2 yards.
@@ -106,7 +119,7 @@ This Machine Learning Problem is a Supervised multiclass-Classification Problem.
 In order to make this study as applicable as possible, I chose to separated my data into training and test sets based on the year. For Training I used the play-by-play data from the 2013-2017 regular seasons, and for testing I chose to predict the 2018 regular season. After splitting the training data one step further into a validation set, I was able to evaluate each of my models and to compare them for selection. 
 
 <p align="center">
-<img src="graphics/pXAfX.png" width="400"/>   
+<img src="graphics/pXAfX.png" width="400" />   
 </p>
 
 I ran into two different problems when deciding my scoring metric.  
@@ -116,10 +129,25 @@ I ran into two different problems when deciding my scoring metric.
 Recall and Precision do not work with Multi-Classification problems even though they are good for imbalanced classes. After some reasearch and studying, I decided to evaluate my Models with a **Weighted Average F1 score**. This type of score takes into account the imbalance in the classes and can be used for any model. 
 
 <p align="center">
-<img src="graphics/model_selection.png" width="400"/>
+<img src="graphics/model_selection.png" width="600" height="400"/>
 </p>
    
 My base model is a Multi-Class Logistic Regression model. I followed with RandomForests and GradientBoosting and ran Grid Searches on both. The GradientBoosting Randomized Search performed the best with a Weighted F1 score of **0.954**. 
 
 <a name="conclusion"></a>
 ## 6. Conclusion
+
+Predicting the Decision on 4th down has huge applications. 
+###1. Coaching Decisions
+  -Understanding 
+###2. Football Education
+  -Educating Football Fans about 4th downs and why/when they occur
+  -Providing base for young players to advance their 
+###3. Leagues
+  - NFL
+  - NCAA
+  - XFL
+From live in game coaching, keeping the defense out on the field because you know from the field position, yards to go, the quarter, etc. that the opposing team is going to Go for it. 
+
+Pressuring your defense on 3rd down to force the opposing team into a situation where they have to punt. 
+
