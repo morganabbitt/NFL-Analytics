@@ -2,10 +2,6 @@
 
 Time and time again we hear about coaches punting or kicking a field goal on 4th down just to hear later that they should have gone for it. So when should they really go for it? Using the combination of Exploratory Data Analysis and Machine Learning, I aim to build a model that takes into account the field position, the drive, the quarter, and anything else you can think of to predict whether or not a team is going to Punt, Kick a Field Goal, or Go for it on 4th down. 
 
-<p align="right">
-<img src="graphics/4-down.jpg" width="300" height="450">
-</p>
-
 ### Table of Contents
 
 1. [Overview](#overview)
