@@ -1,5 +1,12 @@
 # NFL Advanced Analytics on 4th down 
 
+**Predicting a Punt, Field Goal, or Go for it on 4th down** 
+
+Morgan Abbitt 
+
+[Github](https://github.com/morganabbitt) | [Linked in](https://www.linkedin.com/in/morganabbitt/) | 
+<a href = "mailto: morganabbitt@yahoo.com">Email</a>
+
 Time and time again we hear about coaches punting or kicking a field goal on 4th down just to hear later that they should have gone for it. So when should they really go for it? Using the combination of Exploratory Data Analysis and Machine Learning, I aim to build a model that takes into account the field position, the drive, the quarter, and anything else you can think of to predict whether or not a team is going to Punt, Kick a Field Goal, or Go for it on 4th down. 
 
 ### Table of Contents
@@ -10,6 +17,7 @@ Time and time again we hear about coaches punting or kicking a field goal on 4th
 4. [Analysis](#ana)
 5. [Models](#model)
 6. [Conclusion](#conclusion)
+7. [Contact Information](#contact)
 
 <a name="overview"></a>
 ## 1. Overview
@@ -25,7 +33,7 @@ Need a quick refresher? Check out this [video...](https://www.youtube.com/watch?
 **Using Exploratory Data Analysis and Machine Learning, this study predicts deicion making on 4th down and provides insight into what the outcomes could be if coaching tatics were adjusted.**
 
 My long term goals: 
-I want to use the research and analyses I have done to revolutionalize sports using Big Data. As a woman and a data scientist, I love bringing my skills and my passions to this male dominanted industry. So much more needs to be done and we will never know the advances we can make unless we do work similar to this study. 
+I want to use the research and analyses I have done to revolutionalize sports using Big Data. As a woman and a data scientist, I love bringing my skills and my passions to this industry. So much more needs to be done and we will never know the advances we can make unless we do work similar to this study. 
 
 <a name="data"></a>
 ## 3. Data
@@ -163,3 +171,15 @@ Predicting the Decision on 4th down has huge applications.
   - NCAA
   - XFL
   - This dataset is specific to the NFL, but the game does not change. From NCAA Football, to the XFL, to High School Football, this analogy and these predictions could be used for any football league. 
+  
+
+<a name="contact"></a>
+## 7. Contact Information
+
+My name is Morgan Abbitt and I am extremely passionate about using Machine Learning to advance sports. I am a Data Scientist with a background in General Mathematics, some of my interests outside data science include soccer, watching sports, spending time outside hiking/running, my dogs, and my family! 
+
+**Email** : <a href = "mailto: morganabbitt@yahoo.com">morganabbitt@yahoo.com</a>
+
+**Linked In** : [www.linkedin.com/in/morganabbitt/](https://www.linkedin.com/in/morganabbitt/)
+
+**Git Hub** : [github.com/morganabbitt](https://github.com/morganabbitt)
