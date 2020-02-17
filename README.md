@@ -146,7 +146,7 @@ My base model is a Multi-Class Logistic Regression model. I followed with Random
 <img src="graphics/gbc_cm.png" width="600" height="400"/>
 </p>
 
-The final step of this Machine Learning Problem was to run the model on the test set. After fitting on the Training, we predict on the Test set that we had set aside until now. As we can see on the left y-axis we have the true labels and along the x-axis we have the predicted labels. The Model Predicted Punts and Field Goals to almost xxx % but only predicted about 90% of Go for it's correctly. This was generally expected because during our eda we saw a clear difference in Punt's and Field Goal's distribution based on field position. If we take a look below at the Permutation Feature Importance we can see the features that really affected our model. 
+The final step of this Machine Learning Problem was to run the model on the test set. After fitting on the Training, we predict on the Test set that we had set aside until now. As we can see on the left y-axis we have the true labels and along the x-axis we have the predicted labels. The Model Predicted Punts 98% of the time correctly, Field Goals to 95% correctly, but only predicted about 90% of Go for it's correctly. This was generally expected because during our eda we saw a clear difference in Punt's and Field Goal's distribution based on field position. If we take a look below at the Permutation Feature Importance we can see the features that really affected our model. 
 
 <p align="left">
 <img src="graphics/perm_imptnt_test.png" width="750" height="400"/>
