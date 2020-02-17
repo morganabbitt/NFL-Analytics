@@ -2,10 +2,9 @@
 
 **Predicting a Punt, Field Goal, or Go for it on 4th down** 
 
-Morgan Abbitt 
-
+Morgan Abbitt  
 [Github](https://github.com/morganabbitt) | [Linked in](https://www.linkedin.com/in/morganabbitt/) | 
-<a href = "mailto: morganabbitt@yahoo.com">Email</a>
+<a href = "mailto: morganabbitt@yahoo.com">Email</a>  
 
 Time and time again we hear about coaches punting or kicking a field goal on 4th down just to hear later that they should have gone for it. So when should they really go for it? Using the combination of Exploratory Data Analysis and Machine Learning, I aim to build a model that takes into account the field position, the drive, the quarter, and anything else you can think of to predict whether or not a team is going to Punt, Kick a Field Goal, or Go for it on 4th down. 
 
@@ -178,8 +177,8 @@ Predicting the Decision on 4th down has huge applications.
 
 My name is Morgan Abbitt and I am extremely passionate about using Machine Learning to advance sports. I am a Data Scientist with a background in General Mathematics, some of my interests outside data science include soccer, watching sports, spending time outside hiking/running, my dogs, and my family! 
 
-**Email** : <a href = "mailto: morganabbitt@yahoo.com">morganabbitt@yahoo.com</a>
+**Email** : <a href = "mailto: morganabbitt@yahoo.com">morganabbitt@yahoo.com</a> 
 
 **Linked In** : [www.linkedin.com/in/morganabbitt/](https://www.linkedin.com/in/morganabbitt/)
 
-**Git Hub** : [github.com/morganabbitt](https://github.com/morganabbitt)
+**Git Hub** : [github.com/morganabbitt](https://github.com/morganabbitt) 
