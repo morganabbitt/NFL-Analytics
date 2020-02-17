@@ -138,22 +138,28 @@ My base model is a Multi-Class Logistic Regression model. I followed with Random
 <img src="graphics/gbc_cm.png" width="600" height="400"/>
 </p>
 
-The final step of this Machine Learning Problem was to run the model on the test set. After fitting on the Training, we predict on the Test set that we had set aside until now. As we can see on the left y-axis we have the true labels and along the x-axis we have the predicted labels
+The final step of this Machine Learning Problem was to run the model on the test set. After fitting on the Training, we predict on the Test set that we had set aside until now. As we can see on the left y-axis we have the true labels and along the x-axis we have the predicted labels. The Model Predicted Punts and Field Goals to almost xxx % but only predicted about 90% of Go for it's correctly. This was generally expected because during our eda we saw a clear difference in Punt's and Field Goal's distribution based on field position. If we take a look below at the Permutation Feature Importance we can see the features that really affected our model. 
+
+<p align="left">
+<img src="graphics/perm_imptnt_test.png" width="750" height="400"/>
+</p>
+
+The permutation importance is a model inspection technique and it is calculated by shuffling certain features and observing if there is a decrease in the model's performance. I used permutation feature importance because it can be used on the hold-out test set, which makes it possible to highlight which features contribute the most to the generalized power of the inspected model. 
+
+We can see that yardline100 which is field position, had the most affect on the model. This makes perfect sense in the game of football because a lot of decisions are determined by how close or how far you are away from your opponents endzone. The next feature was expected points, this shows that teams take into account the probability of success/failure on 4th downs and use that as an indicator about whether to Punt, Kick a Field Goal, of Go for it. 
 
 <a name="conclusion"></a>
 ## 6. Conclusion
 
 Predicting the Decision on 4th down has huge applications. 
 ### 1. Coaching Decisions
-  -Understanding 
+  - Understanding what parts of the game make a difference on 4th down, eg. Field Position, Expected Points, Yards to Go, Score Differential and so much more. 
+  - Using model for in game predictions about another team or using it for your own team to check if your coaching "gut" feeling is aligned with the correct prediction.  
 ### 2. Football Education
-  -Educating Football Fans about 4th downs and why/when they occur
-  -Providing base for young players to advance their 
+  - Educating Football Fans about 4th downs and why/when they occur
+  - Providing base for young players to advance their understanding to further their football knowledge
 ### 3. Leagues
   - NFL
   - NCAA
   - XFL
-From live in game coaching, keeping the defense out on the field because you know from the field position, yards to go, the quarter, etc. that the opposing team is going to Go for it. 
-
-Pressuring your defense on 3rd down to force the opposing team into a situation where they have to punt. 
-
+  - This dataset is specific to the NFL, but the game does not change. From NCAA Football, to the XFL, to High School Football, this analogy and these predictions could be used for any football league. 
