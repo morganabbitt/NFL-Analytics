@@ -1,3 +1,7 @@
+<p align="center">
+<img src="graphics/NFL_cover.png" width="950" height="200">
+</p>
+
 # NFL Advanced Analytics on 4th down 
 
 **Predicting a Punt, Field Goal, or Go for it on 4th down** 
