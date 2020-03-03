@@ -9,3 +9,6 @@
 
 #Ignore ipynbs
 *.ipynb_checkpoints
+
+#ignore h5 files
+*.h5
